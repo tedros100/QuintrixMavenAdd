@@ -7,9 +7,7 @@ import java.util.Map.Entry;
 
 public class CountWords {
 
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
 		Map<String, Integer> wordMap = new TreeMap<String,Integer>();
 		try {
@@ -19,7 +17,7 @@ public class CountWords {
 			String line = "";
 			while (bf.readLine()!=null) {
 				line = bf.readLine();
-				//line.replaceAll("\\p{P}|\\`|[0-9]|\\r\n", " ").toLowerCase().trim(), "\\s* \\s*");
+				
 				String words[] =line.replaceAll("\\p{P}|\\'|[0-9]|\\r\n", " ").split(" ");
 				for(int i=0; i<words.length;i++) {
 					if(wordMap.containsKey(words[i])) {
